@@ -1,0 +1,38 @@
+version: '3.3'
+
+services:
+  php:
+    build: .docker/php
+    volumes:
+      - .docker/php/php8.1.ini:/etc/php/8.1/fpm/php.ini
+      - .docker/php/php8.1.ini:/etc/php/8.1/cli/php.ini
+      - ./web:/var/app
+    working_dir: /var/app
+    environment:
+      TZ: Asia/Taipei
+    ports:
+      - '9000'
+    networks:
+      - network_default
+
+  nginx:
+    build: .docker/nginx
+    depends_on:
+      - php
+    ports:
+      - 9111:80
+    links:
+      - php
+    volumes:
+      - ./web:/var/app
+    networks:
+      - network_default
+
+networks:
+  network_default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.40.0.0/24
+          gateway: 172.40.0.1
