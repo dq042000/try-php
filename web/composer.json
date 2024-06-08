@@ -1,0 +1,22 @@
+{
+  "name": "dq042000/try_php",
+  "description": "try php",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "mvc"
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^7.4 || ~8.0.0 || ~8.1.0 || ~8.2.0",
+    "dq042000/mysql-workbench-schema-exporter": "^3.0",
+    "dq042000/laminas-doctrine-encrypt": "^1.0",
+    "dq042000/doctrine2-exporter": "^3.2.3"
+  },
+  "autoload": {
+    "psr-4": {}
+  },
+  "autoload-dev": {
+    "psr-4": {}
+  }
+}

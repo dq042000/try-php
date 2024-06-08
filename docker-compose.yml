@@ -4,8 +4,8 @@ services:
   php:
     build: .docker/php
     volumes:
-      - .docker/php/php8.1.ini:/etc/php/8.1/fpm/php.ini
-      - .docker/php/php8.1.ini:/etc/php/8.1/cli/php.ini
+      - .docker/php/php8.2.ini:/etc/php/8.2/fpm/php.ini
+      - .docker/php/php8.2.ini:/etc/php/8.2/cli/php.ini
       - ./web:/var/app
     working_dir: /var/app
     environment:
