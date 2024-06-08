@@ -9,14 +9,22 @@
   "minimum-stability": "stable",
   "require": {
     "php": "^7.4 || ~8.0.0 || ~8.1.0 || ~8.2.0",
-    "dq042000/mysql-workbench-schema-exporter": "^3.0",
-    "dq042000/laminas-doctrine-encrypt": "^1.0",
-    "dq042000/doctrine2-exporter": "^3.2.3"
+    "dq042000/mysql-workbench-schema-exporter": "^4.0",
+    "dq042000/laminas-doctrine-encrypt": "^2.6",
+    "dq042000/doctrine2-exporter": "^4.0",
+    "phpseclib/phpseclib": "^2.0",
+    "firebase/php-jwt": "^5.2",
+    "namshi/jose": "^7.2"
   },
   "autoload": {
     "psr-4": {}
   },
   "autoload-dev": {
     "psr-4": {}
+  },
+  "config": {
+    "allow-plugins": {
+      "laminas/laminas-dependency-plugin": true
+    }
   }
 }

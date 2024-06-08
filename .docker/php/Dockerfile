@@ -41,5 +41,5 @@ WORKDIR /var/app
 
 EXPOSE 9000
 
-CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+CMD ["php-fpm8.2"]
 
