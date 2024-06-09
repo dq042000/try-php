@@ -13,7 +13,7 @@
     "dq042000/laminas-doctrine-encrypt": "^2.6",
     "dq042000/doctrine2-exporter": "^4.0",
     "phpseclib/phpseclib": "^2.0",
-    "firebase/php-jwt": "^5.2",
+    "firebase/php-jwt": "^6.0",
     "namshi/jose": "^7.2"
   },
   "autoload": {
