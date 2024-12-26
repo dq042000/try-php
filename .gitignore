@@ -1,2 +1,4 @@
 .history
 web/vendor/
+web/data/temp/*
+!web/data/.gitkeep
