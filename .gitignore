@@ -1,4 +1,6 @@
 .history
 web/vendor/
 web/data/temp/*
+docker-compose.yml
+
 !web/data/.gitkeep
