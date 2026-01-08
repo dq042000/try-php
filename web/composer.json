@@ -14,7 +14,8 @@
     "dq042000/doctrine2-exporter": "^4.0",
     "phpseclib/phpseclib": "^2.0",
     "firebase/php-jwt": "^6.0",
-    "namshi/jose": "^7.2"
+    "namshi/jose": "^7.2",
+    "paragonie/sodium_compat": "^1.24.0"
   },
   "autoload": {
     "psr-4": {}
