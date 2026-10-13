@@ -2,8 +2,8 @@
 use Namshi\JOSE\JWS;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
-use phpseclib\Crypt\RSA;
-use phpseclib\Math\BigInteger;
+use phpseclib3\Crypt\PublicKeyLoader;
+use phpseclib3\Math\BigInteger;
 
 //取回access token
 include "config.php";
@@ -27,18 +27,17 @@ $n = $jd['keys'][0]['n'];
 // 取得public key，需安裝套件
 // composer require phpseclib/phpseclib
 // https://github.com/phpseclib/phpseclib
-$rsa = new RSA();
 $nx = new BigInteger($obj->urlsafeB64Decode($n), 256);
 $ex = new BigInteger($obj->urlsafeB64Decode($e), 256);
 
-$rsa->loadKey(
+$rsa = PublicKeyLoader::load(
     array(
         'e' => $ex,
         'n' => $nx,
     )
 );
 
-$pubkey = $rsa->getPublicKey();
+$pubkey = $rsa->toString('PKCS8');
 
 // 驗證id token，需安裝套件
 // composer require namshi/jose
